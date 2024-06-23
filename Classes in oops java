@@ -1,0 +1,38 @@
+
+class Person {
+    String name;
+    int age;
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+
+    // Method to check if the person is an adult
+    boolean isAdult() {
+        return age >= 18;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Person person1 = new Person("Alice", 30);
+        person1.displayDetails();
+        if (person1.isAdult()) {
+            System.out.println(person1.name + " is an adult.");
+        } else {
+            System.out.println(person1.name + " is not an adult.");
+        }
+        Person person2 = new Person("Bob", 15);
+        person2.displayDetails();
+
+        // Check if the second person is an adult
+        if (person2.isAdult()) {
+            System.out.println(person2.name + " is an adult.");
+        } else {
+            System.out.println(person2.name + " is not an adult.");
+        }
+    }
+}
